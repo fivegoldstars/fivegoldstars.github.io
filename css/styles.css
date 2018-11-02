@@ -131,6 +131,15 @@ input, select, textarea {
 		line-height: 1.65;
 	}
 
+	bios {
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 14pt;
+		font-weight: 300;
+		line-height: 1.65;
+
+	}
+
+
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
