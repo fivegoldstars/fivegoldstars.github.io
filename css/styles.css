@@ -2281,6 +2281,8 @@ input, select, textarea {
 
 		.icon.style1 {
 			color: #efa8b0;
+			width: 0.5em;
+			height: 0.5em;
 		}
 
 		.icon.style2 {
