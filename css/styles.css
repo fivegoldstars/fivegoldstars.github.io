@@ -137,6 +137,7 @@ input, select, textarea {
 		font-weight: 300;
 		line-height: 1.65;
 		text-align: justify;
+    		text-justify: inter-word;
 
 	}
 
