@@ -2241,7 +2241,7 @@ input, select, textarea {
 		}
 
 		.icon.major {
-			border: solid 1px;
+			border: solid 10px;
 			display: inline-block;
 			border-radius: 100%;
 			padding: 0.65em;
