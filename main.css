@@ -212,6 +212,7 @@ input, select, textarea {
 
 	h2 {
 		font-size: 1.5em;
+		color: red;
 	}
 
 	h3 {
@@ -2347,14 +2348,11 @@ input, select, textarea {
 /* Image */
 
 	.image {
-		border-radius: 0px;
-		border: 0;
 		display: inline-block;
 		position: relative;
 	}
 
 		.image img {
-			border-radius: 0px;
 			display: block;
 		}
 
