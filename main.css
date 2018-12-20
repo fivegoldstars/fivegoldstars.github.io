@@ -2243,8 +2243,8 @@ input, select, textarea {
 		.icon.major {
 			border: solid 10px;
 			display: inline-block;
-			width: 2.25em;
-			height: 2.25em;
+			max-width: 2.25em;
+			max-height: 2.25em;
 			border-radius: 100%;
 			padding: 0.65em;
 			margin: 0 0 2em 0;
