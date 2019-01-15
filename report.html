@@ -256,21 +256,108 @@ characters and revenue, as well as budget and revenue.</p>
 
 <p><br>Our analysis can be concluded into 3 parts. Firstly, to summarise the distribution of the overall data. Most films receive relatively low revenue and low rating compared to the range of revenue of the films selected. Most films lie in the category of low revenue and low rating. Secondly, to summarise the relationship between film revenue and rating. Our data has demonstrated that low rated films received lower revenue, yet it does not show the trend that high rated films received higher revenue. Films with moderately high rating have revenue higher than films with lower ratings. Thirdly, to summarise the relationship between film revenue and gender. Films with moderately high percentage of male actors received higher revenue than those with high percentage of female actors. Very high percentage of male actors is not favorable for generating high revenue. Last but not least, to summarise the relationship between film revenue and budget. There is a positive correlation between film revenue and budget, although this is subject to the extreme case where very high budget actually correspond to a lower revenue.</section>
                 
-                 <!--Statistical Analysis-->
-                
-                <section id="statistical analysis" class="main">
-                                <h2>Statistical Analysis</h2>
-								<p>Statistical analysis</p>
-							</section>
-
-                    
-                               <!-- Visualisations-->
+                   <!-- Polar Chart-->
 			
-			 <!-- <iframe width="900" height="700" frameborder="0" scrolling="no" src="//plot.ly/~qm2group11/85.embed"></iframe>-->
+			<iframe width="900" height="700" frameborder="0" scrolling="no" src="//plot.ly/~qm2group11/85.embed"></iframe>
                 
                 <section id="visualisations" class="main">
-                                <h2>Visualisations</h2>
+                                <h2>Polar Chart</h2>
+                    
+                    <iframe width="900" height="700" frameborder="0" scrolling="no" src="//plot.ly/~qm2group11/85.embed"></iframe>
+                    
+                    <h1>INTERESTING THINGS FROM POLAR CHART - TARA</h1>
 							</section>
+                
+                 <!--Statistical Analysis-->
+                
+<section id="statistical analysis" class="main">
+<h2>Statistical Analysis</h2>
+
+<h3><u>Correlation Analysis</u></h3>
+    
+<p>Correlation analysis depends to some extent on making assumptions about the collected data and choosing the most suitable way of comparing that data. The performance of the correlation analysis methods depends on the form of the analysed data and how it relates to the approach being used. There are parametric and non-parametric test methods. Parametric ones, such as Linear Regression and Pearson Correlation Coefficient, assume that sample data comes from a population that follows a probability distribution based on a fixed set of parameters. Conversely, a non-parametric test, such as Kendall’s Tau and Spearman’s Rank Correlation Coefficient, is suitable for data for which the parameter set is not fixed. Nonparametric tests work for data which is distribution-free or has a specified distribution but with the distribution's parameters unspecified.</p>
+    
+<p>Relying on a fixed parameter set, parametric models assume more about a given population than nonparametric methods do. When the assumptions are correct, parametric methods produce more accurate estimates compared to nonparametric methods. However, as more is assumed by a parametric test, when the assumptions are not correct they have a greater chance of failing.
+</p>
+
+<p>In this project, the sample data collected on revenues, rankings, gender and budget is data with no specified distribution. Thus, only nonparametric tests could be used to determine the correlation between revenue and 3 different variables (rankings, gender and budget). There are two accepted measures of non-parametric rank correlations: Kendall’s tau and Spearman’s Rank Correlation Coefficient (Spearman’s rho). These two tests assess statistical associations based on the ranks of the data to measure the strength of the relationship between two variables. In most of the situations, the interpretations of Kendall’s tau and Spearman’s rho are very similar and thus lead to the same conclusions.</p>
+    
+<p><ul>
+    <li><em>Kendall’s tau:</em> usually smaller values than Spearman’s rho correlation, calculations based on concordant and discordant pairs, insensitive to error, P values are more accurate with smaller sample sizes, correlation coefficient between 1 and -1.
+</li>
+    
+    <li><em>Spearman’s rho:</em> usually has larger values than Kendall’s Tau, calculations based on deviations, much more sensitive to error and discrepancies in data, correlation coefficient between 1 and -1.
+</li>
+    </ul>
+         
+    
+<p>Kendall’s tau p-value is more accurate if there is a smaller sample size which is why we also calculated Spearman’s rho. However, there is evidence to suggest that Kendall’s tau is a better estimate of correlation than Spearman’s (Field, 2005). Kendall’s tau is also much less sensitive to error. Furthermore, Kendall’s tau is calculated based on comparing pairs of data points and seeing if they ‘match’, whereas spearman’s is based on deviations.
+</p>
+
+    <p>Since samples of revenues, rankings, gender and budget vary in size and distribution (and possibly in some other ways), both tests were conducted to pick up differences in accuracies between the two and strengthen reliability of conclusions made after verifying results.
+</p>
+    
+    <p>To conduct Spearman’s rho, the following conditions must be satisfied:<ul>
+<li>the two variables should be measured on an ordinal, interval or ratio scale,</li>
+<li>there is a monotonic relationship between the two variables.</li>
+</ul>
+    
+    <p>To conduct Kendall’s tau, the following conditions must be satisfied:
+<ul>
+<li>the two variables should be measured on an ordinal or continuous scale,
+</li>
+<li>there is a monotonic relationship between the two variables.
+</li>
+</ul>
+    
+    <p>To conduct Spearman’s rho, the following conditions must be satisfied:<ul>
+<li>the two variables should be measured on an ordinal, interval or ratio scale,</li>
+<li>there is a monotonic relationship between the two variables.</li>
+</ul>
+    
+    <p>Data collected in this project satisfy the conditions of the two tests:
+<h1><ul>
+<li>revenue (in dollars)</li>
+<li>ratings (from TMDb)</li>
+<li>gender (% male/female actors in a movie)</li>
+<li>budget (in dollars)</li>
+</ul></h1>
+    
+    <h4><b><em>Revenue vs Ratings</em></b></h4>
+    
+    <p>Kendall’s tau correlation coefficient (τb) = 0.209		Spearman’s rho correlation coefficient (rs) = 0.307
+</p>
+    
+    <p><em>Kendall’s tau:</em> there was a weak, positive correlation between revenue and ratings, which was statistically significant (τb = 0.209, p < 0.000).</p>
+
+    
+    <p><em>Spearman’s rho:</em> there was a weak, positive correlation between revenue and ratings, which was statistically significant (rs = 0.307, p < 0.000).</p>
+
+        <h4><b><em>Revenue vs Gender</em></b></h4>
+
+    <p>Kendall’s tau correlation coefficient (τb) = 0.013		Spearman’s rho correlation coefficient (rs) = 0.020
+.</p>
+    
+    <p>There was practically no correlation between revenue and gender (τb = 0.013, rs = 0.020).
+</p>
+    
+     <h4><b><em>Revenue vs Budget</em></b></h4>
+    
+    <p>Kendall’s tau correlation coefficient (τb) = 0.537
+.</p>
+     <p>Spearman’s rho correlation coefficient (rs) = 0.721
+.</p>
+     <p><em>Kendall’s tau:</em> there was a strong, positive correlation between revenue and budget, which was statistically significant (τb = 0.537, p < 0.000).
+</p>
+     <p><em>Spearman’s rho:</em> there was a strong, positive correlation between revenue and budget, which was statistically significant (rs = 0.721, p < 0.000).
+</p>
+         
+           <h4><b><em>Conclusions</em></b></h4>
+    
+<p>The best indicator of the level of revenue collected by a movie is its budget. The more is invested in the movie, the more money it makes.
+</p>
+                
+</section>
 								
                 
                                 <section id="results" class="main">
