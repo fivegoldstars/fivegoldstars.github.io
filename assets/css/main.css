@@ -29,6 +29,14 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+#figure-small {max-width:200px;}
+
+#figure-medium {max-width:500px;}
+
+#figure-extra-large {max-width:1000px;}
+
+#figure-large {max-width:750px;}
+
 .column {
   width: 50%;
   padding: 5px;
