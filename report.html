@@ -39,30 +39,97 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Content -->
+						<!-- Introduction -->
 							<section id="initialproposal" class="main">
-								<h2>Research Question</h2>
+								<h2>Introduction</h2>
+                                <h3>Research Question</h3>
                                 <p>Can we trust public film ratings to predict how successful a film will be in the box office?
                                 </p>
-                                <h2>Aims and Hypotheses</h2>
+                                <h3>Aims</h3>
                                 <p><ul>
-                                    <li>Aim 1</li>
-                                    <li>Aim 2</li>
+                                    <li> Determine whether film ratings influence film revenue.</li>
+                                    <li> Determine whether the gender of actors or film budget is more predictive of box-office success.</li>
                                 </ul>
-                                Hypotheses.
-                                </p>
+                                
+                                  <h3>Hypothesis</h3>
+                                <p><ul>
+                                    <li> Film ratings will not predict box-office success
+.</li>
+                                    <li>The gender of actors will predict box-office success</li>
+                                <li>Film budget will predict box-office success</li>
+                                </ul>
+                        </section>
+
+                        <!-- Context -->
+                        
+                        <section id="context" class="main">
                                 <h2>Research Context</h2>
 								<p>Why we chose this project.</p>
 								<h2>Related Research</h2>
 								<p>Related research</p>
 							</section>
+                        
+                         <!-- Methodology -->
 						
 						<section id="proposedmethods" class="main">
-								<h2>Proposed Methodology</h2>
-								<p>To analyse the data we will use both bar charts and contour maps. Bar charts will be used to determine variances between categories (e.g. genres, film actors, ratings vs revenue). Contour maps will allow us to visualise whether there is a concentration of films at a particular film rating/ box-office revenue. Scatter graphs may also be used to determine an overall trend. We will use statistical tests (e.g. Pearson’s/ Spearman’s Rank etc.) to determine the significance of any relationship found.</p>
-                            <p>A successful project will reveal whether film ratings (public opinion) is indicative of the actions the public will follow (i.e. will the public/critics give a film a bad rating but still go and see it regardless?). Are film ratings ignored? And does this mean there are other factors which influence an individual’s decision to watch a film? If this is the case, a successful project will then call into question the value of rating products/ services as a whole, especially if they do not appear to influence consumer purchase trends.  </p></section>
-						
-          
+								
+                            <h2>Methodology</h2>
+								
+                            <p>This section describes the research and presentation methods we used. The next paragraphs outline:
+                                <ul>
+                            <li> how we created our visualisations
+</li>
+                            <li>what statistical analysis methods we used</li>
+                            <li>the creation of our website</li>
+                            </ul>
+                            
+                             <p>We measured the following film-features and contrasted them against film-revenue in turn:
+                                <ul>
+                            <li> film ratings
+</li>
+                            <li>film budget</li>
+                            <li>film gender-split</li>
+                            </ul>
+
+						<h3>How we created our visualisations</h3>
+                            
+                            <p>We created 3 sets of visualisations for each variable; bar-graphs, violin charts and scatterplots. All these visualisations were created using Python Azure Notebooks and the Python library <em>Seaborn.</em>We also coded one larger polar-chart, to allow for comparison between factors.
+</p>
+                            <p>We also coded one larger polar-chart, to allow for comparison between factors using <em><a href="http://plot.ly">Plotly.</a></em></p>
+                            
+                            <h4><b><em>Bar-Graphs</em></b></h4>
+                            
+                            <p>We constructed bar-graphs because they are easy for viewers to interpret. At a glance, the viewer can see a large quantity of data and the changes between categories e.g. between film ratings. We also included additional bars to show the interquartile ranges.</p>
+                             <p>We chose bar-graphs over line graphs due to the volume of data which made individual lines in the line-graphs difficult to see. Instead, we placed our data into categories which suits bar-graphs better.
+</p>
+                            
+                            <div style=" font-size:80%; text-align:center;"><img src="/images/Screenshot%202019-01-14%20at%2016.19.05.png"  max-height: 350px  style="padding-bottom:0.5em;"  /></div>
+                            
+                           <div style=" font-size:80%; text-align:center;"><img src="/images/Screenshot%202019-01-14%20at%2016.19.13.png"  max-height: 350px  style="padding-bottom:0.5em;"  /></div>
+                            
+                            <h4><b><em>Violin-Graphs</em></b></h4>
+                            
+                            <p>We built violin-graphs because, like bar-graphs, they are simple for viewers to understand. Violin graphs display data which has categories well e.g. our weighted film ratings and also reveal more information than bar-graphs by presenting the probability density of variables e.g. how values within categories are distributed.</p>
+                            
+                            
+                            <div style=" font-size:80%; text-align:center;"><img src="/images/violingraphcode.png"  height: 250px  style="padding-bottom:0.5em;"  /></div>
+                            
+                           <div style=" font-size:80%; text-align:center;"><img src="/images/violingraphexample.png"  max-height: 350px  style="padding-bottom:0.5em;"  /></div>
+                            
+                            <h4><b><em>Scatterplot</em></b></h4>
+                            
+                            <p>We coded scatter plots to see any initial correlations between budget/ film gender-split/ film rating and film revenue. We included a line of best fit to determine potential relationships between factors before undertaking the statistical analysis. Scatter plots also showed us between which variables films were most concentrated.</p>
+                            
+                            
+                            <div style=" font-size:80%; text-align:center;"><img src="/images/scattercode.png"  height: 250px  style="padding-bottom:0.5em;"  /></div>
+                            
+                           <div style=" font-size:80%; text-align:center;"><img src="/images/scattergraph.png"  max-height: 350px  style="padding-bottom:0.5em;"  /></div>
+                            
+                            <h4><b><em>Polar Chart</em></b></h4>
+                            
+                            <p>Our polar chart shows the distribution of films according to different film ratings with the colours representing different genders, the size of the points representing different budgets and the radius representing revenue. This will be looked at in greater detail in the Polar Chart section.</p>
+                            
+                            
                             <section id="data" class="main">
 								<h2>Datasets</h2>
 								<p>Source of our data, why we chose it.</p><ul>
