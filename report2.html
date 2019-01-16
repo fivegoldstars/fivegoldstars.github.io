@@ -1,0 +1,537 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Full Report</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/css/styles.css" />
+		<noscript><link rel="stylesheet" href="fivegoldstars.github.io/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Full Report</h1>
+						<p>How We Did It</p>
+					</header>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="/">Back to Home</a></li>
+							<li><a href="#intro">Introduction</a></li>
+							<li><a href="#context">Research Context</a></li>
+							<li><a href="#methods">Methodology</a></li>
+							<li><a href="#data">Datasets</a></li>
+                            <li><a href="#descr">Descriptive Analysis</a></li>
+                            <li><a href="#polar">Polar Chart</a></li>
+                            <li><a href="#statsan">Statistical Analysis</a></li>
+                            <li><a href="#results">Results</a></li>
+                            <li><a href="#results">Discussion</a></li>
+                            <li><a href="#limits">Limitations</a></li>
+                            <li><a href="#next">Next Steps</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<h2><b>Introduction</b></h2>
+                                <h3>Research Question</h3>
+                                <p>Can we trust public film ratings to predict how successful a film will be in the box office?
+                                </p>
+                                <h3>Aims</h3>
+                                <p><ul>
+                                    <li> Determine whether film ratings influence film revenue.</li>
+                                    <li> Determine whether the gender of actors or film budget is more predictive of box-office success.</li>
+                                </ul>
+                                
+                                  <h3>Hypothesis</h3>
+                                <p><ul>
+                                    <li> Film ratings will not predict box-office success
+.</li>
+                                    <li>The gender of actors will predict box-office success</li>
+                                <li>Film budget will predict box-office success</li>
+                                </ul>
+                        </section>
+
+                        <!-- Context -->
+                        
+                        <section id="context" class="main">
+                                <h2><b>Research Context and Literature Review</b></h2>
+								<p>Why we chose this project.</p>
+								<h2>Related Research</h2>
+								<p>Related research</p>
+							</section>
+                        
+                         <!-- Methodology -->
+						
+						<section id="methods" class="main">
+								
+                            <h2><b>Methodology</b></h2>
+                            
+                            <div id="toc_container">
+<ul class="toc_list">
+    <p class="toc_title">This section describes the research and presentation methods we used. The next paragraphs outline:</p>
+    <li><a href="#visualisations">How we created our visualisations</a></li>
+ <li><a href="#statsmethods">What statistical analysis methods we used</a></li>
+    <li><a href="#website">How we created our website</a></li>
+</ul>
+</div>
+								
+                            
+                             <p>We measured the following film-features and contrasted them against film-revenue in turn:
+                                <ul>
+                            <li> film ratings
+</li>
+                            <li>film budget</li>
+                            <li>film gender-split</li>
+                            </ul>
+
+						<section id="visualisations"><h3><b><u>How we created our visualisations</u></b></h3></section>
+                            
+                            <p>We created 3 sets of visualisations for each variable; bar-graphs, violin charts and scatterplots. All these visualisations were created using Python Azure Notebooks and the Python library <em>Seaborn.</em>We also coded one larger polar-chart, to allow for comparison between factors.
+</p>
+                            <p>We also coded one larger polar-chart, to allow for comparison between factors using <em><a href="http://plot.ly">Plotly.</a></em></p>
+                            
+                            <h4><b><em>Bar-Graphs</em></b></h4>
+                            
+                            <p>We constructed bar-graphs because they are easy for viewers to interpret. At a glance, the viewer can see a large quantity of data and the changes between categories e.g. between film ratings. We also included additional bars to show the interquartile ranges.</p>
+                             <p>We chose bar-graphs over line graphs due to the volume of data which made individual lines in the line-graphs difficult to see. Instead, we placed our data into categories which suits bar-graphs better.
+</p>
+                            
+                            <div style=" font-size:80%; text-align:center; width: 100%;"><img src="http://fivegoldstars.github.io/images/Screenshot%202019-01-14%20at%2016.19.05.png"   style="padding-bottom:0.5em; max-width: 100%"  /></div>
+                            
+                           <div style=" font-size:80%; text-align:center; width:100%"><img src="http://fivegoldstars.github.io/images/Screenshot%202019-01-14%20at%2016.19.13.png"  style="padding-bottom:0.5em; max-height=450px"  /></div>
+                            
+                            <h4><b><em>Violin-Graphs</em></b></h4>
+                            
+                            <p>We built violin-graphs because, like bar-graphs, they are simple for viewers to understand. Violin graphs display data which has categories well e.g. our weighted film ratings and also reveal more information than bar-graphs by presenting the probability density of variables e.g. how values within categories are distributed.</p>
+                            
+                            
+                            <div style=" font-size:80%; text-align:center; max-width: 100%"><img src="http://fivegoldstars.github.io/images/violingraphcode.png"   style="padding-bottom:0.5em; max-height:250px; max-width: 100%; "  /></div>
+                            
+                           <div style=" font-size:80%; text-align:center;"><img src="http://fivegoldstars.github.io/images/violingraphexample2.png"  max-height: 350px  style="padding-bottom:0.5em; max-width: 100%; max-height: 450px"  /></div>
+                            
+                            <h4><b><em><br>Scatterplot</em></b></h4>
+                            
+                            <p>We coded scatter plots to see any initial correlations between budget/ film gender-split/ film rating and film revenue. We included a line of best fit to determine potential relationships between factors before undertaking the statistical analysis. Scatter plots also showed us between which variables films were most concentrated.</p>
+                            
+                            
+                            <div style=" font-size:80%; text-align:center; max-width: 100%"><img src="http://fivegoldstars.github.io/images/scattercode.png"  height: 250px  style="padding-bottom:0.5em; max-width: 100%; max-height: 250px"  /></div>
+                            
+                           <div style=" font-size:80%; text-align:center;"><img src="http://fivegoldstars.github.io/images/scattergraph.png"  max-height: 350px  style="padding-bottom:0.5em;"  /></div>
+                            
+                            <h4><b><em><br>Polar Chart</em></b></h4>
+                            
+                            <p>Our polar chart shows the distribution of films according to different film ratings with the colours representing different genders, the size of the points representing different budgets and the radius representing revenue. This will be looked at in greater detail in the Polar Chart section.</p>
+                        
+                        
+                <section id="statsmethods"><p><h3><b><u>What statistical analysis methods we used</u></b></h3></section>
+
+<p><h4><b>Spearman's Rank and Kendall's Tau</b></h4>
+
+<p>We used Python to find the Spearman and Kendall’s Tau correlation coefficients. This assigns a numerical value to the correlation and explains how strong/weak it is. From this information we will also know whether to accept or reject our hypotheses. 
+</p>
+
+<p>Spearman’s rank is a non-parametric statistical test and is used instead of Pearson’s product-moment correlation when data is not normally distributed. It is used to determine the strength of a monotonic relationship (either when the value of one variable increases, so does the value of the other; or when the value of one variable increases, the other decreases).
+</p>
+
+<div style=" font-size:80%; text-align:center;"><img src="http://fivegoldstars.github.io/images/spearman-1-small.png"  height="height" style="padding-bottom:0.5em;" id="figure-extra-large" /><br><em>Figure 1: example of monotonic and non-monotonic relationships</em></div>
+
+<p>Coefficient values will be between -1 and +1. +1 denotes a perfect positive correlation, -1 denotes a perfect negative correlation and 0 denotes no correlation at all. It is calculated using the following equation:</p>
+
+<div style=" font-size:80%; text-align:center;"><img src="http://fivegoldstars.github.io/images/Figure%208.5.png"  max-width: 250px height="height" style="padding-bottom:0.5em;" id="figure-small" /><br><em>In the equation <b>d</b> is the difference between ranks and <b>n</b> is the number of ranks</em></div>
+
+
+<p><br>Kendall's tau is a non-parametric test similar to Spearman’s Rank. It is used when many score have the same rank e.g. for our film ratings.</p>
+
+<p>We will be interpreting a very weak correlation as anything between 0 and 0.19; between 0.2 and 0.39 as a weak correlation; between 0.4 and 0.59 as a moderate correlation; between 0.6 and 0.79 as a strong correlation and between 0.8 and 1.0 as a very strong correlation.</p>
+
+<p><b><h4>Spearman's Rank vs. Kendall's Tau</b></h4></p>
+
+<p>Interpretations of the two tests are very similar but Spearman’s is more widely used. Kendall’s tau p-value is more accurate if there is a smaller sample size which is why we also calculated Spearman’s rank. However, there is evidence to suggest that Kendall’s tau is a better estimate of correlation than Spearman’s (Field, 2005). Kendall’s is also much less sensitive to error. Furthermore, Kendall’s tau is calculated based on comparing pairs of data points and seeing if they ‘match’, whereas spearman’s is based on deviations.</p>
+
+<p>For our project we therefore chose to use both given that for some variables, many scores had the same rank but for others they did not. Using both tests will also pick up differences in accuracies between the two and strengthen overlaps in results.
+    
+                        <section id="website" class="main"><p><h3><b><u>Creation of our website</u></b></h3>   </section> 
+                        
+                        <p> </p>
+                        
+                        
+                        </section>
+                            
+                            
+                            <section id="data" class="main">
+								<h2><b>Datasets</b></h2>
+								<p>Source of our data, why we chose it.</p><ul>
+                            <li>Reliability</li>
+                            <li>Why this dataset</li>
+                            <li>Data Cleaning, What We Did</li>
+                            <li>Ethics</li></ul>
+							</section>
+
+
+<!--Descriptive Analysis-->
+        
+        <section id="descr" class="main">
+            
+            <h2><b>Descriptive Analysis</b></h2>
+            
+            <div id="toc_container">
+<ul class="toc_list">
+  <li><a href="#overalldata"><b>1. Analysis on the overall datasets</b></a>
+  <ul>
+    <li><a href="#revdistribution">Distribution of Revenue</a></li>
+    <li><a href="#ratingdistribution">Distribution of Rating</a></li>
+  </ul>
+</li>
+ <li><a href="#relationships"><b>2. Analysis on relationships</b></a>
+  <ul>
+    <li><a href="#revratings">Revenue and Ratings </a></li>
+    <li><a href="#revgender">Revenue and Gender</a></li>
+  </ul>
+</li>
+</div>
+
+<p>In this section, we will summarise our data systematically and use it to evaluate the relationships we attempt to find out. We will first look at how the overall datasets behave by doing distribution analysis. Then we will visualise the data using tables and different graphs and assess their coherence with our hypothesis.</p>
+
+            <section id="overalldata" class="main"><p><b><u><h3>1. Analysis on the overall datasets</h3></u></b></p></section>
+
+<p>We will look at the distributions of film revenue and ratings to grasp a better understanding of the insights of how much films usually earn and how good they are often ranked. Frequency tables, descriptive statistics and histograms will be used for the analysis (SAS Institute Inc., 1999).</p>
+
+            <section id="revdistribution" class="main"><p><b><h4><em>Distribution of Revenue:</h4></b></em></p></section>
+
+<p>Frequency Table 1, Descriptive Statistics Table 1 and Histogram 1 have been constructed for the distribution analysis for the film revenue.</p>
+
+<p>As shown on the first row of Table 1, there are 4302 films lie on the mean interval of 100 million, which implies their revenue range from 0 to 200 million. This implies majority of films, precisely 86.7% of the total films collected for this analysis, obtained revenue of this range. The average revenue for the films is 146 millions, with a minimum of 1 and maximum of 2788 million, according to the Descriptive Statistics Table 1.  </p>
+                    
+
+<div style="width:100%">
+<div class="row">
+  <div class="column1" style="font-size:80%; text-align:center; align-content: center">
+      <img src="http://fivegoldstars.github.io/images/Screenshot%202019-01-14%20at%2012.11.45.png" style="max-height:350px"  align="middle"/><br><em>Figure 2: Frequency table for revenue</em>
+  </div>
+  <div class="column2" style="font-size:80%; text-align:center">
+    
+    <img src="http://fivegoldstars.github.io/images/Screenshot%202019-01-14%20at%2011.01.51.png" style="max-height:350px;" align="middle"/><br><em>Figure 3: Descriptive statistics table for revenue</em></div>
+</div>
+</div>
+
+<p><br>In addition, the frequency table can be plotted graphically into a histogram, as shown in Histogram 1.</p>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="http://fivegoldstars.github.io/images/Screenshot%202019-01-13%20at%2017.56.30.png"  style="padding-bottom:0.5em; max-height:350px; " /><br><em>Figure 4: Histogram showing frequency for revenue</em></div>
+                    <br>
+
+<p><br> Histogram can indicate skewness, which is often used to tests how far and to which direction the skew is deviated from the horizontal symmetry of a normal distribution. (Brownmath, 2016).The histogram above demonstrates a positive skewness of 5.34, which is defined as highly skewed (Brownmath, 2016). This will also be used for the statistical analysis in the next section.</p>
+
+            <section id="ratingdistribution" class="main"><p><em><b><h4>Distribution of Rating:</em></h4></b></p></section>
+
+<p>Frequency Table 2, Descriptive Statistics Table 2 and Histogram 2 have been constructed for the distribution analysis for the film rating.</p>
+
+<p>As displayed in Frequency Table 2, there are 2904 films lie on the mean interval of 5.5, which suggests their ratings range from 5 to 6; 1825 films lie on the mean interval of 6.5, which suggests their ratings range from 6 to 7. This indicates, the majority of films, precisely 95.3% of the total films collected for this analysis, received ratings of these 2 range. The average rating for the films is 6.08, with a minimum of 4.8 and maximum of 8.25, according to the Descriptive Statistics Table 2.</p>
+                    
+
+<div style="width:100%">
+<div class="row">
+  <div class="column1" style="font-size:80%; text-align:center; align-content: center">
+      <img src="http://fivegoldstars.github.io/images/frequencytableforweightedrating.png" style="max-height:350px; max-width: 100%; "  align="middle"/><br><em>Figure 5: Frequency table for weighted rating</em>
+  </div>
+  <div class="column2" style="font-size:80%; text-align:center">
+    
+    <img src="http://fivegoldstars.github.io/images/descriptivestats2.png" style="max-height:350px; max-width: 100%; " align="middle"/><br><em>Figure 6: Descriptive statics for weighted rating</em></div>
+</div>
+    </div>
+
+<p>The histogram below demonstrates a positive skewness of 0.884, which is defined as moderately skewed (Brownmath, 2016). This again will also be used for the statistical analysis in the next section.</p>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="http://fivegoldstars.github.io/images/histogram2.png"  style="padding-bottom:0.5em; max-height:350px;" /><br><em>Figure 7: Histogram showing frequency for weighted rating</em></div>
+
+<p><br>However, there exists errors on the data, as reflected in the second last row of table 1 and table that 62 films data are missing. This may have affected the results of the analysis.
+</p>
+
+<p><b><u><h3>2. Analysis on relationships</b></h3></u></p>
+
+<p>We will be focusing to determine the relationship between film ratings and their revenue to test our hypothesis. Meanwhile we will also look at some other relationships, including gender of
+
+characters and revenue, as well as budget and revenue.</p>
+
+<p>For the analysis of revenue and ratings, we will utilise cross tabulation to determine the relationship between the two variables in depth. For the analysis of each of the 3 combinations, we will examine the relationship visually using scatterplot, bar-graphs and violin-graphs.  All graphs are plotted with the horizontal axis being film rating, gender and budget respectively for each combination, and the vertical axis being film revenue in billions. This is because we consider film revenue to be the dependent variable and rating, gender, budget to be the independent variable (Cleveland, 1993). For the graphs with independent variable being categorical, including bar charts and violin chart, the film revenue has been converted to average revenue for each interval on the horizontal axis to be able to construct the graph. Since the films under the same interval on the horizontal axis are generalised into one part, the revenue they obtained have to be integrated also.</p>
+
+<section id= "revratings" class="main"><p><em><b><h4>Revenue and Ratings</h4></b></em></p>
+
+<p>Cross tabulation is a table that summarises the frequency of variables in each table cell with defined features. For instance, as shown in Figure 2, films in the cell of rating 4-5 and revenue 1 to 200 million have a frequency of 2.  Moreover, in this particular cross tabulation, the percentages of the frequency of the film out of the total frequency of the group of film with 1 shared feature have also been shown. For example, for all the films rated 4-5, there are 66.7% of them that receive revenue from 1 to 200 million.</p>
+
+<p>For our analysis, by displaying how many films are distributed in each rating-revenue cell, our cross tabulation can allow viewers to see the relationship between film ratings and revenue in a glance. There exists some patterns in the table. First of all, most films rated 5-6, specifically 94.1%, received a revenue of 1-200 million, as highlighted in the table. Followed by films rated 6-7, which takes up 80.5% of the same revenue category. Secondly, films received moderate ratings also obtained moderate range of revenue. Thirdly, films received relatively low ratings  below 6 did not obtain high revenue, which evidences that films revenue might be statistically dependent to ratings. On the other side, however, the data does not demonstrate the tendency that films with very ratings will receive very high revenue. For instance, for films rated 8-9, none of them obtained revenue above 1300 millions. As a contrast, some films rated 7-8 obtained revenue of this range. This conflicts with our hypothesis.</p>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="http://fivegoldstars.github.io/images/weightedratingtab.png"  style="padding-bottom:0.5em; max-height:500px;" /><br><em>Figure 8: Revenue * Weighted Rating Crosstabulation</em></div>
+
+<p><br>Yet, we considered that the analysis could be biased due to how the data was divided into intervals and the definition of what is considered high and low revenue as well as high and low ratings. For instance, since most films obtained a revenue below 200 million, it might not be effective to divide the data evenly within the revenue range of all the films selected and  make 1-200 million as the lowest revenue category. To eliminate this distribution effect, we conducted another cross tabulation for films below 200 million, as displayed below in Figure 3.</p>
+    
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="http://fivegoldstars.github.io/images/var_ratingvar.png" style="padding-bottom:0.5em; max-height:350px; max-width: 100%" /><br><em>Figure 9: var * rating var Rating Crosstabulation</em></div>
+
+<p><br>Similar to Figure 2, most films selected received ratings of 5-6 and 6-7 and obtained relatively low revenue as shown in the top red box in this table. Interestingly, it can be observed that films with rating 6-7 consistently received higher revenue than films with rating 5-6, as highlighted in the lower red box on the left, except for the revenue interval of 170 millions. Besides, in general, very few films were rated above 7, and not quite a few of them received high revenue. This results connote that although the data does not demonstrate a strong coherence to the hypothesis of the project that higher ratings of films chosen indicates higher box office revenue, there are evidence showing there are more films with relatively but not very high rating obtained higher box office revenue than films with lower ratings.</p>
+
+<p>The data for revenue and film ratings have also been displayed graphically for more comprehensive analysis. The graphs are plotted with the horizontal axis being film rating and the vertical axis being film revenue in billions. The results from the graphs demonstrate a weak correlation between film revenue and rating. Firstly, as shown on Fig. 3 the scatterplot, the flat best-fit line implies a weak correlation between the 2 variables. This will be illustrated further in the statistical analysis section. In addition, some films with higher ratings do demonstrates higher ratings, but only very few of them, leading to a less robust result. Specifically, the films with high revenue and ratings can be identified as the isolated dots on the graphs, especially ones above 1.5 billion revenue. They were all rated between 6 and 7.5. The number for those films are small as reflected by the low density of the dots, compared to the ones scatter densely around the best fit line below 1 billion revenue. At the same time, higher ratings doesn’t alway indicate high revenue. For instance, the films rated above 7.5 billion are across all ranges of revenue, and a larger proportion of them lie in the lower revenue range below 0.5 billion revenue compared to the ones above as indicated by the density of the dots. The a few films rated above 8 also received revenue below 0.5 billion.</p>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="http://fivegoldstars.github.io/images/ratingrevenue.png"  style="padding-bottom:0.5em; max-height:350px;" /><br><em>Figure 10: Scatter graph showing correlation between film revenue and film rating</em></div>
+
+<p><br>The results from the bar-charts also exhibit a weak relationship between film revenue and rating. Firstly, as shown on Fig. 4 the barchart on the left, the bars form a fluctuating upward sloping trends. For instance, the average revenue increases from rating 7.2 to 7.3, decreases drastically from 7.3 to 7.4 and reaches a precedence at rating 8.0. Similarly, on Fig. 5 the barchart on the left, with bigger intervals, the effect for each individual intervals of rating is generalised. Now a increasing trend is more noticeable, despite the outlier of revenue for the rating 6.</p>
+            
+<div style="width:100%">
+<div class="row">
+  <div class="column" style="font-size:80%; text-align:center; vertical-align: middle">
+      <img src="http://fivegoldstars.github.io/images/ratingbarchart1.png" style="max-height:350px; vertical-align: middle; max-width: 100%" /><br><em>Figure 11: Bar chart showing the distribution of ratings and revenue</em>
+  </div>
+  <div class="column" style="font-size:80%; text-align:center; vertical-align: middle">
+    
+    <img src="http://fivegoldstars.github.io/images/ratingbarchart2.png" style="height:350px; vertical-align: middle; max-width: 100%" /><br><em>Figure 12: Bar chart comparing revenue and films with a rating of 5 to 8</em></div>
+</div>
+</div>
+
+<p><br> The violin chart below on Figure 7 visually reveals the distribution of revenue within each film rating. According to the graph, most films have revenue below 0.5 billions and the highest rating appeared in films rated 7.</p>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="http://fivegoldstars.github.io/images/ratingviolin.png"  height="450px" style="padding-bottom:0.5em; max-width: 100%" /><br><em>Figure 13: Violin chart showing the distribution of revenue within each film rating </em></div></section>
+
+<section id="revgender" class="main"><p><em><b><h4>Revenue and Gender</h4></b></em></p>
+
+<p>The graphs for this section are plotted with the horizontal axis being film percentage of male film actors and female film actors respectively, and the vertical axis being film average revenue in billions. As shown below, for each type of graph, the male version and the female version are in symmetry. This is because for each film the percentage of male and female adds up to be 1, resulting in complementary distributions. For instance, films that have 20% of actors being males have 80% of actors being female.</p>
+
+<p>The scatterplots below demonstrate the trend that films that have moderately high proportions of male actors correspond to higher revenue. Specifically, on Fig. 7 the scatterplot for revenue and percentage of male actors, there exists an increasing trend of revenue for films from the percentage of 0% to 80%. This can be reinforced by the increased height of the densely scattered points near 0.4 revenue as well as the upward sloping direction of the distantly scattered points above 0.6 revenue. The film where the male percentage being 80% obtained the highest average revenue. However, the trend start to go the reverse direction after the percentage of 80%, indicating that percentage of male actors being too high is not favorable for the film revenue success. This is the opposite for the scatter-plot for revenue and percentage of female actors on Fig. 8, due to the nature of symmetry.</p>
+            
+<div style="width:100%">
+<div class="row">
+  <div class="column" style="font-size:80%; text-align:center; vertical-align: middle">
+      <img src="http://fivegoldstars.github.io/images/malereg.png" style="height:350px; vertical-align: middle; max-width: 100%" /><br><em>Figure 14: Scatter plot showing the relation between revenue and percentage of male actors</em>
+  </div>
+  <div class="column" style="font-size:80%; text-align:center; vertical-align: middle">
+    
+    <img src="http://fivegoldstars.github.io/images/femalereg.png" style="height:350px; max-width: 100%; vertical-align: middle" /><br><em>Figure 15: Scatter plot showing the relation between revenue and percentage of female actors </em></div>
+</div>
+</div>
+            
+<div style="width:100%">
+<div class="row">
+  <div class="column" style="font-size:80%; text-align:center; vertical-align: middle">
+      <img src="http://fivegoldstars.github.io/images/barchartmale%20(1).png" style="height:350px; vertical-align: middle; max-width: 100%" /><br><em>Figure 16: Scatter plot showing the relation between revenue and percentage of male actors</em>
+  </div>
+  <div class="column" style="font-size:80%; text-align:center; vertical-align: middle">
+    
+    <img src="http://fivegoldstars.github.io/images/barchartfemale%20(1).png" style="height:350px; max-width: 100%; vertical-align: middle" /><br><em>Figure 17: Scatter plot showing the relation between revenue and percentage of female actors </em></div>
+</div>
+</div>
+            
+<div style="width:100%">
+<div class="row">
+  <div class="column" style="font-size:80%; text-align:center; vertical-align: middle">
+      <img src="http://fivegoldstars.github.io/images/violinmale.png" style="height:350px; vertical-align: middle; max-width: 100%" /><br><em>Figure 81: Scatter plot showing the relation between revenue and percentage of male actors</em>
+  </div>
+  <div class="column" style="font-size:80%; text-align:center; vertical-align: middle">
+    
+    <img src="http://fivegoldstars.github.io/images/violinfemale.png" style="height:350px; max-width: 100%; vertical-align: middle" /><br><em>Figure 19: Scatter plot showing the relation between revenue and percentage of female actors </em></div>
+</div>
+</div>
+    
+<p>The data for revenue and budget have also been plotted with the horizontal axis being film budget and the vertical axis being film revenue in billions. The revenue for the barcharts and violin charts is average revenue, the reason has been explained in the beginning of section 2. 
+</p>
+
+<p>As shown on the scatterplot in Figure 10 below, there is a conspicuous positive correlation between revenue and budget. This can also be illustrated by the relatively steep best-fit line that is closer to the y=x function with a slope of 1 than to the horizontal axis.
+</p>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="http://fivegoldstars.github.io/images/budgetreg.png"  height="350px" style="padding-bottom:0.5em;" /><br><em>Figure 20: Scatter plot showing the correlation between film budget and film revenue </em></div>
+
+<p><br>Although there are some outliers above the budget of 250 millions, as indicated by the points below the best-fit curve and the few ones lie within the budget of 300 to 400 millions. The strength of the correlation might have been weakened by the high number of films that have low revenue and low budget, as indicated by the densely scatter points in the lower left hand corner of the graph. The bar-chart and violin chart below demonstrates similar trends.</p>
+            
+<div style="width:100%">
+<div class="row">
+  <div class="column" style="font-size:80%; text-align:center; vertical-align: middle">
+      <img src="http://fivegoldstars.github.io/images/budgetbarchart2.png" style="height:450px; max-width: 100%;  vertical-align: middle" /><br><em>Figure 21: Bar-chart showing distribution of film revenue and film budget</em>
+  </div>
+  <div class="column" style="font-size:80%; text-align:center; vertical-align: middle">
+    
+    <img src="http://fivegoldstars.github.io/images/budgetviolingraph.png" style="height:450px; max-width: 100%; vertical-align: middle" /><br><em>Figure 22: Violin chart showing distribution of film revenue and film budgets</em></div>
+</div>
+</div>
+
+    <p><br>Our analysis can be concluded into 3 parts. Firstly, to summarise the distribution of the overall data. Most films receive relatively low revenue and low rating compared to the range of revenue of the films selected. Most films lie in the category of low revenue and low rating. Secondly, to summarise the relationship between film revenue and rating. Our data has demonstrated that low rated films received lower revenue, yet it does not show the trend that high rated films received higher revenue. Films with moderately high rating have revenue higher than films with lower ratings. Thirdly, to summarise the relationship between film revenue and gender. Films with moderately high percentage of male actors received higher revenue than those with high percentage of female actors. Very high percentage of male actors is not favorable for generating high revenue. Last but not least, to summarise the relationship between film revenue and budget. There is a positive correlation between film revenue and budget, although this is subject to the extreme case where very high budget actually correspond to a lower revenue.</p></section></section>
+                
+
+                               <!-- Polar Chart-->
+			
+                
+                <section id="polar" class="main">
+                                <h2>Polar Chart</h2>
+                    
+                    <iframe width="100%" height="700" frameborder="0" scrolling="no" src="//plot.ly/~qm2group11/85.embed"></iframe>
+                    
+                    <h1>INTERESTING THINGS FROM POLAR CHART - TARA</h1>
+							</section>
+                
+                 <!--Statistical Analysis-->
+                
+<section id="statsan" class="main">
+<h2><b>Correlation Analysis</b></h2>
+    
+<p>Correlation analysis depends to some extent on making assumptions about the collected data and choosing the most suitable way of comparing that data. The performance of the correlation analysis methods depends on the form of the analysed data and how it relates to the approach being used. There are parametric and nonparametric test methods. Parametric ones, such as Linear Regression and Pearson Correlation Coefficient, assume that sample data comes from a population that follows a probability distribution based on a fixed set of parameters. In contrast, a nonparametric test, such as Kendall’s Tau and Spearman’s Rank Correlation Coefficient, is suitable for data for which the parameter set is not fixed. Nonparametric tests work for data which does not follow any distribution or has a specified distribution but with unspecified parameters.
+</p>
+    
+<p>Relying on a fixed parameter set, parametric models assume more about a given population than nonparametric methods do. When the assumptions are correct, parametric methods produce more accurate estimates compared to nonparametric methods. However, as more is assumed by a parametric test, when the assumptions are not correct, there is a bigger risk of them failing.
+
+</p>
+
+<p>In this project, the sample data collected on revenues, rankings, gender and budget is data with no specified distribution. Therefore, only nonparametric tests could be used to determine the correlation between revenue and 3 different variables (rankings, gender and budget). The two accepted tests of nonparametric rank correlations are Kendall’s tau and Spearman’s Rank Correlation Coefficient (Spearman’s rho). These two tests assess statistical associations based on the ranks of the data to measure the strength of the relationship between two variables. In most of the situations, the interpretations of Kendall’s tau and Spearman’s rho are very similar and, thus, lead to the same conclusions.
+</p>
+    
+    <p>Nevertheless, there a few minor differences between the two tests which make them suitable for various datasets. Compared to Spearman’s rho correlation, Kendall’s tau produces usually smaller values, it is insensitive to error and its p-values are more accurate with smaller sample sizes. While Kendall’s tau’s calculations are based on concordant and discordant pairs, Spearman’s rho’s calculations are based on deviations. Finally, correlation coefficient values are between 1 and -1 for both tests.
+</p>
+    
+    <p>Since samples of revenues, rankings, gender and budget vary in size and distribution (and possibly in some other ways), both tests were conducted to pick up differences in accuracies between the two and strengthen reliability of conclusions made after verifying results.
+</p>
+    
+    
+    <p>To conduct Spearman’s rho, the following conditions must be satisfied:<ul>
+<li>the two variables should be measured on an ordinal, interval or ratio scale,</li>
+<li>there is a monotonic relationship between the two variables.</li>
+</ul>
+    
+    <p>To conduct Kendall’s tau, the following conditions must be satisfied:
+<ul>
+<li>the two variables should be measured on an ordinal or continuous scale,
+</li>
+<li>there is a monotonic relationship between the two variables.
+</li>
+</ul>
+    
+    <p>To conduct Spearman’s rho, the following conditions must be satisfied:<ul>
+<li>the two variables should be measured on an ordinal, interval or ratio scale,</li>
+<li>there is a monotonic relationship between the two variables.</li>
+</ul>
+    
+    <p>Data collected in this project satisfy the conditions of the two tests.
+        
+        <p>To determine whether the correlation between revenue and 3 variables (ratings, budget and gender) is significant, the p-value was compared to the significance level of 0.05. Significance level of 0.05 indicates that there is a 5% chance to conclude that a correlation exists even when it actually does not. The p-value also indicates whether the correlation coefficient of the relationship between two variables is significantly different from 0.
+</p>
+    
+    <p>When the p-value ≤ 0.05, the correlation is said to be “statistically significant” and it can be concluded that the correlation is different from 0.
+</p>
+    
+    <p>When p-value > 0.05, the correlation is said to be “not statistically significant”and it cannot be concluded that the correlation is different from 0.
+</p>
+    
+    
+<p>To view a step by step process of how the analysis was executed using Python, click <a href="https://github.com/fivegoldstars/fivegoldstars.github.io/blob/master/python_code/Statistical%20Analysis.ipynb">here.</a></p>
+    <h3><b><u>Revenue vs Ratings</u></b></h3>
+    
+    <p>Spearman’s rho correlation coefficient (rs) = 0.296, p-value = 5.87x10-<sup>102</sup>
+        <p>Kendall’s tau correlation coefficient (τb) = 0.211 , p-value = 8.31x10-<sup>100</sup>
+</p>
+    
+    <p><em>Spearman’s rho:</em> there was a weak, positive correlation between revenue and ratings, which was statistically significant (p-value ≤ 0.05). Thus, it can be concluded that the correlation is different from 0.
+</p>
+    
+ <p><em>Kendall’s tau:</em> there was a weak, positive correlation between revenue and ratings, which was statistically significant (p-value ≤ 0.05). Thus, it can be concluded that the correlation is different from 0.
+</p>
+    
+    <h3><b><u>Revenue vs Budget</u></b></h3>
+    
+    <p>Spearman’s rho correlation coefficient (rs) = 0.707, p-value = 0.0
+        <p>Kendall’s tau correlation coefficient (τb) = 0.523, p-value = 0.0
+    
+    <p><em>Spearman’s rho:</em>  there was a strong, positive correlation between revenue and budget, which was statistically significant (p-value ≤ 0.05). Thus, it can be concluded that the correlation is different from 0.
+
+</p>
+    
+ <p><em>Kendall’s tau:</em> there was a fairly strong, positive correlation between revenue and budget, which was statistically significant (p-value ≤ 0.05). Thus, it can be concluded that the correlation is different from 0.
+</p>
+
+        <h3><b><u>Revenue vs Gender (Male Actors)</u></b></h3>
+
+    <p>Spearman’s rho correlation coefficient (rs) = 0.0215, p-value = 0.591
+	<p>Kendall’s tau correlation coefficient (τb) = 0.0152, p-value = 0.597
+</p>
+    <p><em>Spearman’s rho:</em>  there was a very small, positive correlation between revenue and gender (male actors), which was not statistically significant (p-value > 0.05). Thus, it cannot be concluded that the correlation is different from 0.
+
+
+</p>
+    
+ <p><em>Kendall’s tau:</em> there was a very small, positive correlation between revenue and gender (male actors), which was not statistically significant (p-value > 0.05). Thus, it cannot be concluded that the correlation is different from 0.
+
+</p>
+    
+     <h3><b><u>Revenue vs Gender (Female Actors)</u></b></h3>
+
+    <p>Spearman’s rho correlation coefficient (rs) = - 0.0319, p-value = 0.425
+
+	<p>Kendall’s tau correlation coefficient (τb) = - 0.0222, p-value = 0.441
+
+</p>
+    <p><em>Spearman’s rho:</em>  there was a very small, negative correlation between revenue and gender (female actors), which was not statistically significant (p-value > 0.05). Thus, it cannot be concluded that the correlation is different from 0.
+
+
+
+</p>
+    
+ <p><em>Kendall’s tau:</em> there was a very small, negative correlation between revenue and gender (female actors), which was not statistically significant (p-value > 0.05). Thus, it cannot be concluded that the correlation is different from 0.
+
+</p>
+    
+         
+           <h4><b><em>Conclusions</em></b></h4>
+    
+<p>Ratings appeared to be a weak predictor of the box office success. Similarly, there was no correlation between gender and revenue. The best indicator of the level of revenue collected by a movie is its budget. The larger the amount of money invested in a film, the more money it makes.
+
+</p>
+                
+</section>
+
+                    
+								
+                
+                                <section id="results" class="main">
+								<h2><b>Results and Discussion</b></h2>
+                                    <h3><b><u>Results</u></b></h3>
+                                <h3><b><u>Discussion</u></b></h3>
+                                    
+                </section>
+                
+                 <section id="limits" class="main">
+                     <h2><b>Limitations</b></h2>
+                </section>
+                
+                 <section id="next" class="main">
+                     <h2><b>Next Steps</b></h2>
+                </section>
+                        
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+							<h2 align="center">Group 11:</h2>
+							<p> Carlota Veal Baschwitz, Christina Jie Ying Wang, Sara Hüttl, Szymon Hawryszko, Tara Nelson  </p>
+						<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+
