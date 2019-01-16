@@ -50,7 +50,7 @@ footer, header, hgroup, menu, nav, section {
 
 .toc_title {
     font-weight: 700;
-    text-align: center;
+    text-align: left;
 }
 
 #toc_container li, #toc_container ul, #toc_container ul li{
