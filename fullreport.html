@@ -182,11 +182,82 @@
                             
                             <section id="data" class="main">
 								<h2><b>Datasets</b></h2>
-								<p>Source of our data, why we chose it.</p><ul>
-                            <li>Reliability</li>
-                            <li>Why this dataset</li>
-                            <li>Data Cleaning, What We Did</li>
-                            <li>Ethics</li></ul>
+                                
+<div id="toc_container">
+<ul class="toc_list">
+    <li><a href="#source"> The source of our data </a></li>
+    <li><a href="#reliability"> Reliability</a></li>
+    <li><a href="#cleaning">What we did </a></li>
+    <li><a href="#ethics">Ethics </a></li>
+ 
+</div>
+                                
+                                <section id="source" class="main"><br><br></section>
+                                
+                                <b><u><h3>The source of our data</h3></u></b>
+                                
+                                 <section id="reliability" class="main"><br><br></section>
+                                
+                                <b><u><h3>Reliability</h3></u></b>
+                                
+                                 <section id="cleaning" class="main"><br><br></section>
+                                
+                                <b><u><h3>What we did</h3></u></b>
+    
+    <h4><b><em>Cleaning</em></b></h4>
+    
+    <p>The first step in cleaning the data was removing unnecessary columns like runtime or production country in order to create a dataframe more focussed for our needs. Then, we removed from our dataframe every movie with missing quantitative information because for sufficient analysis we needed complete information for all variables in order to gain a complete view of the data. In addition we filtered out films that have yet to be released. 
+</p>
+    
+    <p>This process reduced the number of usable films from 45000 to 5023. </p>
+    
+<h4><b><em>Merging</em></b></h4>
+    
+    <p>Next, we merged the three separate .csv files (movies_metadata, credits and ratings) into one dataframe. We did this by merging on the movie id (a unique number assigned to each movie). </p>
+    
+    <h4><b><em>Improving Readability</em></b></h4>
+    
+    <p>In this step we removed unnecessary formatting in the columns to make them more readable, both for the programme and the humans working with it. For example, the cast column contained information on the name of the characters and links referring to the actor’s IMDb page. As we were only interested in the gender of the cast we removed the excess data as well as removing the stylistic parentheses and inverted quotes.  We then ended up with the genders of cast members represented as numbers with 2 representing male, 1 representing female and 0 representing unknown (information not logged on TMDb).  
+</p>
+    
+    <h4><b><em>Calculating Male/Female Ratio</em></b></h4>
+    
+    <p>As percentage male/female cast was a variable we wanted to analyse, we needed to calculate this information as it wasn’t present in the dataframe. To do this, we first added new columns for the number of males, females and unknown and the size of the cast. We then created a for loop going through each row and counting how often a 2, 1 or 0 appears and stored this information in the newly created columns. The size of the cast was the length of the array in the cast column.  
+
+We then decided to remove movies that had ‘unknown’ cast members. This was because if a movie had for example 2 male and 3 female actors, but 6 unknown there is not sufficient information to accurately estimate the gender split. For the remaining movies we added columns with the percentages of male and female actors by dividing the number of males/females in a film by the overall cast size. 
+</p>
+    
+    <h4><b><em>Weighted Rating</em></b></h4>
+    
+    <p>We decided to calculate a weighted rating for each movie because of the big differences in vote count for some movies. ‘Weighted’ refers to the fact that some votes are given a greater weight, for example if two movies have a rating of 5.4 but one movie has 14 votes and the other 340, the rating of the first movie would have less significance on the overall average.  
+</p>
+    
+    <h4><b><em>Genre Analysis</em></b></h4>
+    
+    <p>For a better analysis of the effect a film’s genre has on revenue we created a new dataframe (movies_one_genre) and using similar cleaning methods to those used earlier extracted only the first genre stored in each row. From this, we created dataframes containing movies of each particular genre (e.g. a dataframe containing only action films) in order to calculate the average revenue and amount of films for each genre.
+Then, we added a column in which the genre of a movie was converted into a corresponding number to allow for better handling during analysis. 
+</p>
+    
+    <h4><b><em>Problems</em></b></h4>
+    
+    <p>The two main problems we faced whilst cleaning the data were during the merging phase and whilst preparing the data for genre analysis. 
+During the merging phase, we found that Python wasn’t reading the datatypes of each column correctly and was instead reading columns containing numbers (such as movie ID) as strings, which made the data practically unusable when trying to write appropriate code. To combat this, we had to re-establish the datatype of the ID column as integers. Moreover, after successfully merging the data frames, we noticed that the overall number of movies actually went up. After investigating through various parts of the data frame, we noticed that the merging produced some duplicates, which needed to be deleted.
+The other significant problem was trying to represent the genres of movies as numbers. Originally, we tried to achieve this with an If loop within a For loop that would go through each row and if a certain genre name appeared it would store the number in a new column. However, this didn’t work because Python wouldn’t read the genre name as a whole word, but instead read it letter by letter. So instead we created a simple for loop and used the function str.replace() for each individual genre, which turned out to work.
+</p>
+                                
+                                 <section id="ethics" class="main"><br><br></section>
+                                
+                                <b><u><h3>Ethics</h3></u></b>
+    
+    <p>Even though the datasets we used are publicly available to everyone, it is important to consider ethical implications especially in regard to the source of the data. The dataset was published on <a href="http://kaggle.com"> <em>Kaggle</em></a>, with this particular dataset being a mixture of data collected from <a href="http://themoviedb.org"><em>TMDb</em></a><a href="http://themoviedb.org"> and <a href="http://grouplens.org"><em>GroupLens<a href="http://grouplens.org"></em></a>. In terms of numbers for budget and revenue the data comes from the TMDB Open API (<em>TMDb</em> is a community led website). A look into their user guidelines reveals that they recommend the websites <a href="http://boxofficemojo.com"><em>BoxOfficeMojo</em></a> and <a href="http://the-numbers.com"><em>The Numbers</em></a> as sources for budget and revenue data.
+</p>
+    
+        <p><em>The Numbers</em> is directed by <em>Nash Information Services, LLC</em> “the premier provider of movie industry data and research services.” Because of their close link with industry professionals we can assume this data has been acquired ethically and legally, and not through alternative means such as an invasion of privacy as seen with the Sony Pictures Hack in 2014. 
+</p>
+    
+    <p>In terms of the ratings and vote count we decided to only use data from <em>TMDb</em> users and not from GroupLens research because the latter got the data from an API on the website <em>MovieLens</em> which is less popular than  <em>TMDb</em>. The  <em>TMDb</em> website is operated by <em>Fanhattan Inc</em>. In order to rate films, a user has to register with their email and create a username. In their Privacy Policy, <em>Fanhattan Inc.</em> states that they collect data from their users such as location, favourite movie genres or searches, which becomes associated with the personal information provided by the user. However before they share this data with third parties or use it for example by tracking usage patterns or performing analytics, they “create anonymous data records from [the user’s] personal information ("Anonymous Data") by excluding information (such as [the user’s] name) that makes the data personally identifiable to [the user].” All the data we used was therefore anonymized and didn’t allow for any conclusions on the identity of the users. The only names stated are of the actors and crew members of the films, which is publicly available data. 
+</p>
+								
 							</section>
 
 
