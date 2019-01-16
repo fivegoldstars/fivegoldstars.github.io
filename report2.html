@@ -9,7 +9,9 @@
 		<title>Full Report</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="fivegoldstars.github.io/assets/css/main.css" />
+		<link rel="stylesheet" href="
+        fivegoldstars.github.io/assets/css/main.css
+      " />
 		<noscript><link rel="stylesheet" href="fivegoldstars.github.io/assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -381,6 +383,23 @@ characters and revenue, as well as budget and revenue.</p>
                 
 <section id="statsan" class="main">
 <h2><b>Correlation Analysis</b></h2>
+
+    
+<div id="toc_container">
+<ul class="toc_list">
+    <li><a href="#statsintro">Introduction</a></li>
+    <li><a href="#revsratings">Revenue vs Ratings</a></li>
+     <li><a href="#revsbudget">Revenue vs Budget</a></li>
+     <li><a href="#revsmale">Revenue vs Gender (Male Actors)</a></li>
+    <li><a href="#revsfemale">Revenue vs Gender (Female Actors)
+    </a></li>
+    <li><a href="#statsconclusion">Conclusion
+    </a></li>
+ 
+</div>
+    
+                
+<section id="stastintro" class="main"><h3><b><u>Introduction</u></b></h3>
     
 <p>Correlation analysis depends to some extent on making assumptions about the collected data and choosing the most suitable way of comparing that data. The performance of the correlation analysis methods depends on the form of the analysed data and how it relates to the approach being used. There are parametric and nonparametric test methods. Parametric ones, such as Linear Regression and Pearson Correlation Coefficient, assume that sample data comes from a population that follows a probability distribution based on a fixed set of parameters. In contrast, a nonparametric test, such as Kendall’s Tau and Spearman’s Rank Correlation Coefficient, is suitable for data for which the parameter set is not fixed. Nonparametric tests work for data which does not follow any distribution or has a specified distribution but with unspecified parameters.
 </p>
@@ -429,8 +448,10 @@ characters and revenue, as well as budget and revenue.</p>
 </p>
     
     
-<p>To view a step by step process of how the analysis was executed using Python, click <a href="https://github.com/fivegoldstars/fivegoldstars.github.io/blob/master/python_code/Statistical%20Analysis.ipynb">here.</a></p>
-    <h3><b><u>Revenue vs Ratings</u></b></h3>
+<p>To view a step by step process of how the analysis was executed using Python, click <a href="https://github.com/fivegoldstars/fivegoldstars.github.io/blob/master/python_code/Statistical%20Analysis.ipynb">here.</a></p></section>
+    
+    
+   <section id="revsratings" class="main"> <h3><b><u>Revenue vs Ratings</u></b></h3>
     
     <p>Spearman’s rho correlation coefficient (rs) = 0.296, p-value = 5.87x10-<sup>102</sup>
         <p>Kendall’s tau correlation coefficient (τb) = 0.211 , p-value = 8.31x10-<sup>100</sup>
@@ -440,9 +461,9 @@ characters and revenue, as well as budget and revenue.</p>
 </p>
     
  <p><em>Kendall’s tau:</em> there was a weak, positive correlation between revenue and ratings, which was statistically significant (p-value ≤ 0.05). Thus, it can be concluded that the correlation is different from 0.
-</p>
+       </p></section>
     
-    <h3><b><u>Revenue vs Budget</u></b></h3>
+   <section id="revsbudget" class="main"> <h3><b><u>Revenue vs Budget</u></b></h3>
     
     <p>Spearman’s rho correlation coefficient (rs) = 0.707, p-value = 0.0
         <p>Kendall’s tau correlation coefficient (τb) = 0.523, p-value = 0.0
@@ -452,9 +473,9 @@ characters and revenue, as well as budget and revenue.</p>
 </p>
     
  <p><em>Kendall’s tau:</em> there was a fairly strong, positive correlation between revenue and budget, which was statistically significant (p-value ≤ 0.05). Thus, it can be concluded that the correlation is different from 0.
-</p>
+       </p></section>
 
-        <h3><b><u>Revenue vs Gender (Male Actors)</u></b></h3>
+       <section id="revsmale" class="main"> <h3><b><u>Revenue vs Gender (Male Actors)</u></b></h3>
 
     <p>Spearman’s rho correlation coefficient (rs) = 0.0215, p-value = 0.591
 	<p>Kendall’s tau correlation coefficient (τb) = 0.0152, p-value = 0.597
@@ -466,9 +487,9 @@ characters and revenue, as well as budget and revenue.</p>
     
  <p><em>Kendall’s tau:</em> there was a very small, positive correlation between revenue and gender (male actors), which was not statistically significant (p-value > 0.05). Thus, it cannot be concluded that the correlation is different from 0.
 
-</p>
+           </p></section>
     
-     <h3><b><u>Revenue vs Gender (Female Actors)</u></b></h3>
+   <section id="revsfemale" class="main">  <h3><b><u>Revenue vs Gender (Female Actors)</u></b></h3>
 
     <p>Spearman’s rho correlation coefficient (rs) = - 0.0319, p-value = 0.425
 
@@ -483,14 +504,14 @@ characters and revenue, as well as budget and revenue.</p>
     
  <p><em>Kendall’s tau:</em> there was a very small, negative correlation between revenue and gender (female actors), which was not statistically significant (p-value > 0.05). Thus, it cannot be concluded that the correlation is different from 0.
 
-</p>
+       </p></section>
     
          
-           <h4><b><em>Conclusions</em></b></h4>
+          <section id="statsconclusion" class="main"> <h4><b><em>Conclusions</em></b></h4>
     
 <p>Ratings appeared to be a weak predictor of the box office success. Similarly, there was no correlation between gender and revenue. The best indicator of the level of revenue collected by a movie is its budget. The larger the amount of money invested in a film, the more money it makes.
 
-</p>
+              </p></section>
                 
 </section>
 
