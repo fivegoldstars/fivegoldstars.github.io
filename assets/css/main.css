@@ -73,6 +73,12 @@ footer, header, hgroup, menu, nav, section {
   padding: 5px;
 }
 
+.column3 {
+  width: 30%;
+  padding: 5px;
+}
+
+
 /* Clear floats after image containers */
 .row::after {
   content: "";
