@@ -146,7 +146,8 @@
                             <p>We created 3 sets of visualisations for each variable: bar-graphs, violin graphs and scatter plots.
 </p>
                             
-                            <p>Scatter plots were chosen as we could code a line of best fit which would show us if we should expect a positive or negative correlation between variables (or any relationship at all). They would also show us the density of the data i.e. if films were concentrated around a particular film rating. Bar-graphs were chosen as they show the distribution of data. The quantity of our data meant data points greatly overlapped in the scatter plots so having bar-graphs allowed us to categorise the data e.g. by rounding the budget, which in turn showed the separated distributions and frequencies more clearly. Finally, we used violin plots due to their ability to demonstrate the frequency distribution within variable categories rather than the frequency overall e.g. the distribution of film revenues within films which have 80% male actors.</p>
+                            <p>Scatter plots were chosen as we could code a line of best fit which would show us if we should expect a positive or negative correlation between variables (or any relationship at all). They would also show us the density of the data i.e. if films were concentrated around a particular film rating. Bar-graphs were chosen as they show the distribution of data. The quantity of our data meant data points greatly overlapped in the scatter plots so having bar-graphs allowed us to categorise the data e.g. by rounding the budget, which in turn showed the separated distributions and frequencies more clearly. We also used violin plots due to their ability to demonstrate the frequency distribution within variable categories rather than the frequency overall e.g. the distribution of film revenues within films which have 80% male actors. Finally, we created histograms to uncover whether our data was skewed. This in turn affected our statistical analysis as we realised our data was non-parametric  and we therefore had to carry-out different statistical tests than we had originally planned. 
+</p>
                             
                             <p>All these visualisations were created using Python Azure Notebooks and the Python library Seaborn.</p>
                             
@@ -645,22 +646,25 @@ During the merging phase, we found that Python wasn’t reading the datatypes of
     
     <h3><b><u>Introduction</u></b></h3>
     
-<p>Correlation analysis depends to some extent on making assumptions about the collected data and choosing the most suitable way of comparing that data. The performance of the correlation analysis methods depends on the form of the analysed data and how it relates to the approach being used. There are parametric and nonparametric test methods. Parametric ones, such as Linear Regression and Pearson Correlation Coefficient, assume that sample data comes from a population that follows a probability distribution based on a fixed set of parameters. In contrast, a nonparametric test, such as Kendall’s Tau and Spearman’s Rank Correlation Coefficient, is suitable for data for which the parameter set is not fixed. Nonparametric tests work for data which does not follow any distribution or has a specified distribution but with unspecified parameters.
-</p>
-    
-<p>Relying on a fixed parameter set, parametric models assume more about a given population than nonparametric methods do. When the assumptions are correct, parametric methods produce more accurate estimates compared to nonparametric methods. However, as more is assumed by a parametric test, when the assumptions are not correct, there is a bigger risk of them failing.
-
-</p>
-
-<p>In this project, the sample data collected on revenues, rankings, gender and budget is data with no specified distribution. Therefore, only nonparametric tests could be used to determine the correlation between revenue and 3 different variables (user ratings, gender of cast and budget). The two accepted tests of nonparametric rank correlations are Kendall’s tau and Spearman’s Rank Correlation Coefficient (Spearman’s rho). These two tests assess statistical associations based on the ranks of the data to measure the strength of the relationship between two variables. In most of the situations, the interpretations of Kendall’s tau and Spearman’s rank are very similar and, thus, lead to the same conclusions.
-</p>
-    
-    <p>As stated in previous sections, there a few minor differences between the two tests which make them suitable for various datasets. Compared to Spearman’s rank correlation, Kendall’s tau produces usually smaller values, it is insensitive to error and its p-values are more accurate with smaller sample sizes. While Kendall’s tau’s calculations are based on concordant and discordant pairs, Spearman’s rank’s calculations are based on deviations.
-
+<p>Correlation analysis depends to some extent on making assumptions about the collected data and choosing the most suitable way of comparing that data. The performance of the correlation analysis methods depends on the form of the analysed data and how it relates to the approach being used. There are parametric and nonparametric test methods. Parametric ones, such as Linear Regression and Pearson Correlation Coefficient, assume that sample data comes from a population that follows a probability distribution based on a fixed set of parameters. In contrast, a nonparametric test, such as Kendall’s Tau and Spearman’s Rank Correlation Coefficient, is suitable for data for which the parameter set is not fixed. Nonparametric tests work for data which does not follow any distribution or has a specified distribution but with unspecified parameters (Freedman,  2005).
 
 </p>
     
-    <p>Since samples of revenues, rankings, gender and budget vary in size and distribution (and possibly in some other ways), both tests were conducted to pick up differences in accuracies between the two and strengthen reliability of conclusions made after verifying results.
+<p>Relying on a fixed parameter set, parametric models assume more about a given population than nonparametric methods do. When the assumptions are correct, parametric methods produce more accurate estimates compared to nonparametric methods. However, as more is assumed by a parametric test, when the assumptions are not correct, there is a bigger risk of them failing (Statistics Solutions, 2019).
+
+
+</p>
+
+<p>In this project, the sample data collected on revenues, rankings, gender and budget is data with no specified distribution. Therefore, only nonparametric tests could be used to determine the correlation between revenue and 3 different variables (rankings, gender and budget). The two accepted tests of nonparametric rank correlations are Kendall’s tau and Spearman’s Rank Correlation Coefficient (Spearman’s rho). These two tests assess statistical associations based on the ranks of the data to measure the strength of the relationship between two variables. In most of the situations, the interpretations of Kendall’s tau and Spearman’s rho are very similar and, thus, lead to the same conclusions (Statistics Solutions, 2018).
+
+</p>
+    
+    <p>Nevertheless, there are a few minor differences between the two tests which make them suitable for various datasets. Compared to Spearman’s rho, Kendall’s tau produces usually smaller values, it is insensitive to error and its p-values are more accurate with smaller sample sizes. While Kendall’s tau’s calculations are based on concordant and discordant pairs, Spearman’s rho’s calculations are based on deviations. Finally, correlation coefficient values are between 1 and -1 for both tests (Statistics Solutions, 2018).
+
+
+</p>
+    
+    <p>Since samples of revenues, rankings, gender and budget vary in size and distribution (and possibly in some other ways), both Spearman’s rho and Kendall’s tau tests were conducted to pick up differences in accuracies between the two and strengthen reliability of conclusions made after verifying results.
 </p>
     
     
@@ -677,15 +681,21 @@ During the merging phase, we found that Python wasn’t reading the datatypes of
 </li>
 </ul>
     
-    <p>Datasets collected in this project (revenue, ratings, gender, budget) satisfy the conditions of the two tests.
+    <p>Explained at statistics.laerd.com (statistics.laerd.com, 2019), the conditions of Spearman’s rho and Kendall’s tau tests are satisfied by the datasets collected in this project (revenue, ratings, gender, budget).
+
+
         
-        <p>To determine whether the correlation between revenue and the 3 variables (user ratings, gender of cast and budget) is significant, the p-value was compared to the significance level of 0.05. Significance level of 0.05 indicates that there is a 5% chance to conclude that a correlation exists even when it actually does not. The p-value also indicates whether the correlation coefficient of the relationship between two variables is significantly different from 0.
+        <p>To determine whether the correlation between revenue and 3 variables (ratings, budget and gender) is significant, the p-value was compared to the significance level of 0.05. Significance level of 0.05 indicates that there is a 5% chance to conclude that a correlation exists even when it actually does not. The p-value also indicates whether the correlation coefficient of the relationship between two variables is significantly different from 0 (statistics.laerd.com, 2019).
+
 </p>
     
     <p>When the p-value ≤ 0.05, the correlation is said to be “statistically significant” and it can be concluded that the correlation is different from 0.
+
 </p>
     
-    <p>When p-value > 0.05, the correlation is said to be “not statistically significant”and it cannot be concluded that the correlation is different from 0.
+    <p>When p-value > 0.05, the correlation is said to be “not statistically significant” and it cannot be concluded that the correlation is different from 0.
+
+
 </p>
     
     
@@ -806,7 +816,7 @@ During the merging phase, we found that Python wasn’t reading the datatypes of
         
         
         
-        <p>The relationship between the gender of actors/ film budget and ratings as predictors of revenue success found contrasting results. Although men appeared to bring a higher revenue than women, there was no statistically significant relationship between having male or female actors in films and how much money films made. This result was inconclusive, meaning there may be another factor interacting with actors’ genders which affects film-revenue e.g. how famous an actor is. Other studies have pointed at the impact of celebrities on film-success (Treme & Craig, 2013) which could explain why famous models or singers are often cast. In contrast, there was a very strong relationship between a film’s budget and its revenue, suggesting the importance of having money to begin with. As noted in our literature review, this may be due to the ability of high budgets to influence the box-office of film’s with majority negative reviews (Basuroy et al., 2003). However, films with a very high budget did not make as much money, recommending that budget is not the only indicator of success. Nevertheless, out of the variables we measured budget acted as the strongest predictor, supporting previous findings that it has a statistically significant effect on revenue.
+        <p><br>The relationship between the gender of actors/ film budget and ratings as predictors of revenue success found contrasting results. Although men appeared to bring a higher revenue than women, there was no statistically significant relationship between having male or female actors in films and how much money films made. This result was inconclusive, meaning there may be another factor interacting with actors’ genders which affects film-revenue e.g. how famous an actor is. Other studies have pointed at the impact of celebrities on film-success (Treme & Craig, 2013) which could explain why famous models or singers are often cast. In contrast, there was a very strong relationship between a film’s budget and its revenue, suggesting the importance of having money to begin with. As noted in our literature review, this may be due to the ability of high budgets to influence the box-office of film’s with majority negative reviews (Basuroy et al., 2003). However, films with a very high budget did not make as much money, recommending that budget is not the only indicator of success. Nevertheless, out of the variables we measured budget acted as the strongest predictor, supporting previous findings that it has a statistically significant effect on revenue.
 
  </p>
         
@@ -951,8 +961,16 @@ Wolfram Math World. (n.d.) Normal Distribution. Available from: http://mathworld
                      <h3><b><u>Statistical Analysis</u></b></h3>
                      <ul>
                      
-                     <li>Kite, your programming copilot. 2018. How to: scipy. [online]. Available from: https://kite.com/python/examples/665/scipy-compute-the-spearman-correlation [Accessed 5 Jan 2019].</li>
-                         <li>Kite, your programming copilot. How to:scipy. [online]. Available from: https://kite.com/python/examples/729/scipy-compute-kendall's-tau-coefficient-between-2-arrays [Accessed 5 Jan 2019].</li>
+                     <li>Freedman, D.A., 2005. Statistical Models: Theory and Practice. New York: Cambridge University Press. [online] Available at http://assets.cambridge.org/052185/4830/frontmatter/0521854830_frontmatter.pdf [Accessed 5 Jan. 2019].
+</li>
+                         <li>Statistics Solutions. (2018). Kendall's Tau and Spearman's Rank Correlation Coefficient - Statistics Solutions. [online] Available at: https://www.statisticssolutions.com/kendalls-tau-and-spearmans-rank-correlation-coefficient/ [Accessed 5 Jan. 2019].
+</li>
+                         <li>Statistics Solutions. (2019). Selecting Between Parametric and Non-Parametric Analyses - Statistics Solutions. [online] Available at: https://www.statisticssolutions.com/selecting-between-parametric-and-non-parametric-analyses/ [Accessed 5 Jan. 2019].
+</li>
+                         <li>Statistics.laerd.com. (2019). Spearman's Rank Order Correlation using SPSS Statistics - A How-To Statistical Guide by Laerd Statistics. [online] Available at: https://statistics.laerd.com/spss-tutorials/spearmans-rank-order-correlation-using-spss-statistics.php [Accessed 5 Jan. 2019].
+</li>
+                         <li>Statistics.laerd.com. (2019). Kendall's Tau-b using SPSS Statistics - A How-To Statistical Guide by Laerd Statistics. [online] Available at: https://statistics.laerd.com/spss-tutorials/kendalls-tau-b-using-spss-statistics.php [Accessed 5 Jan. 2019].
+</li>
                          
                          </ul>
                      
@@ -993,6 +1011,7 @@ Wolfram Math World. (n.d.) Normal Distribution. Available from: http://mathworld
 
 	</body>
 </html>
+
 
 
 
